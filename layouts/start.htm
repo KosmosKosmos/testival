@@ -1,0 +1,28 @@
+description = "Startseiten-Layout"
+
+[cookieBanner]
+include_css = 0
+update_partial = "components/cookie_js"
+update_selector = "#gdpr-reload"
+cookie_manager_page = "cookies"
+
+[cookieManager]
+include_css = 0
+include_js = 1
+deferred = 0
+==
+<!DOCTYPE html>
+<html lang="{{this.site.code}}" xml:lang="{{this.site.code}}" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        {% partial 'components/meta.htm' %}
+        {% partial 'components/styles.htm' %}
+    </head>
+
+    <body class="page-{{ this.page.id }}">
+        <main uk-height-viewport="expand: true" style="margin-top: -1px">
+        {% page %}
+        </main>
+        {% partial "components/cookies" %}
+        {% partial 'components/scripts.htm' %}
+    </body>
+</html>

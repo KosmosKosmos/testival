@@ -1,0 +1,80 @@
+items:
+    -
+        title: Discord
+        nesting: null
+        type: url
+        url: 'https://discord.gg/xxxxxxx'
+        code: icon
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: discord
+            isExternal: '1'
+            locale:
+                en:
+                    title: Tiktok
+                    url: 'https://tiktop.com/xxxxxxx'
+    -
+        title: Twitter
+        nesting: null
+        type: url
+        url: 'https://twitter.com/xxxxxxx'
+        code: icon
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: twitter
+            isExternal: '1'
+            locale:
+                en:
+                    title: Instagram
+                    url: 'https://instagram.com/xxxxxxx'
+    -
+        title: Instagram
+        nesting: null
+        type: url
+        url: 'https://www.instagram.com/xxxxxxx/'
+        code: icon
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: instagram
+            isExternal: '1'
+            locale:
+                en:
+                    title: Facebook
+                    url: 'https://facebook.com/xxxxxxx/'
+    -
+        title: Facebook
+        type: url
+        url: 'https://facebook.com'
+        code: icon
+        viewBag:
+            isHidden: '0'
+            cssClass: facebook
+            isExternal: '1'
+    -
+        title: Youtube
+        type: url
+        url: 'https://youtube.com'
+        code: icon
+        viewBag:
+            isHidden: '0'
+            cssClass: youtube
+            isExternal: '1'
+    -
+        title: Vimeo
+        type: url
+        url: 'https://vimeo'
+        code: icon
+        viewBag:
+            isHidden: '0'
+            cssClass: vimeo
+            isExternal: '1'
+name: Footer-Social

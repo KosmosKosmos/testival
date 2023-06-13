@@ -1,0 +1,73 @@
+description = "Standard-Layout"
+
+[contenteditor]
+remove = 1
+
+[imageuploader]
+
+[cookieBanner]
+include_css = 0
+update_partial = "components/cookie_js"
+update_selector = "#gdpr-reload"
+cookie_manager_page = "cookies"
+
+[cookieManager]
+include_css = 0
+include_js = 1
+deferred = 0
+
+[sitePicker]
+forceUrl = 0
+
+[staticPage]
+useContent = 0
+default = 0
+
+[ticketshop]
+redirect = "cookies"
+includeStylesJs = 0
+useLangSelector = 0
+showNav = 0
+twoColumns = 1
+project = 2021
+
+[lineup]
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'components/meta.htm' %}
+        {% partial 'components/styles.htm' %}
+    </head>
+
+    {variable name="sections" type="repeater" tab="Segmente" prompt="Seiten-Element hinzufügen" groups="themes/festivent/meta/static-grid.yaml"} {/variable}
+    {variable name="flyingMenu" tab="Menü" type="checkbox" label="Menu über Seite"} {/variable}
+    <body class="page-{{ this.page.id }} uk-background-secondary">
+        <header>
+            {% partial 'components/navigation' flyingMenu=flyingMenu %}
+        </header>
+
+        <main uk-height-viewport="expand: true">
+            {% for section in sections %}
+            <section style="{{section.background ? ('--section-background:'~section.background~';') : ''}}{{section.color ? '--section-color:'~section.color}}">
+                {% set grid = section._group %}
+                {% set row = loop.index %}
+                    <div class="uk-child-width-{{grid}} uk-grid-collapse {% if element.class %} {{section.class}}{% endif %}" uk-grid>
+                        {% for element in section.elements %}
+                        {% set type = element._group %}
+                        {% set col = loop.index %}
+                        <div {% if element.class %}class="{{element.class}}"{% endif %}>
+                            {% partial 'static-components/'~type elementId=id sectionId=section.id element=element %}
+                        </div>
+                        {% endfor %}
+                    </div>
+            </section>
+            {% endfor %}
+        </main>
+
+        {% partial "components/footer" %}
+        {% partial "components/cookies" %}
+        {% partial 'components/scripts.htm' %}
+    </body>
+
+</html>

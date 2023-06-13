@@ -1,0 +1,24 @@
+[staticMenu footer]
+code = "footer"
+
+[staticMenu footerSocial]
+code = "footer-social"
+
+==
+
+<footer>
+    <div class="uk-text-center uk-padding">
+        <img class="uk-logo" src="{{ 'assets/images/logo.png' | theme }}">
+        <nav class="uk-margin-small" uk-navbar>
+            <div class="uk-navbar-center">
+                {% partial 'components/menu' menu=footer class="footer" mobileVisible=true %}
+            </div>
+        </nav>
+        <nav class="uk-margin-small" uk-navbar>
+            <div class="uk-navbar-center">
+                {% partial 'components/social-media' %}
+            </div>
+        </nav>
+        <div class="uk-margin-top copyright uk-visible@m">{{'Copyright'|_}} {{app_name}} {{ 'now' | date('Y') }}</div>
+    </div>
+</footer>

@@ -1,0 +1,32 @@
+items:
+    -
+        title: Impressum
+        nesting: 0
+        type: static-page
+        url: null
+        code: ''
+        reference: impressum
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: 'Privacy policy'
+    -
+        title: Datenschutz
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: datenschutz
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                en:
+                    title: 'Online booking'
+name: Footer

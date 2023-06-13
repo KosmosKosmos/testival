@@ -1,0 +1,5 @@
+{% component 'imageuploader' file=this.page.id~'/image-'~elementId tag="div" leaveOpen=true attributes='uk-height-viewport="offset-top: true;offset-bottom: 20"' %}
+    <div class="uk-position-center">
+        <div class="uk-padding">{% component 'contenteditor' file='static-pages/'~this.page.id~'/'~sectionId~'_'~element.id fixture="h1" class="uk-heading-xlarge" %}</div>
+    </div>
+</div>

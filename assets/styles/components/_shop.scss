@@ -1,0 +1,121 @@
+#ticketshop {
+    min-height: 200px;
+    .uk-card {
+        &:not(.uk-active) {
+            p, div {
+                color: #5a4e64;
+            }
+        }
+        &.uk-active {
+            p, div {
+                color: #0b2e13;
+            }
+        }
+    }
+    #ticketgrid .uk-position-relative {
+        margin-top: 10px;
+    }
+    .alert-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .alertMessage {
+        width: 80%;
+        font-size: 17px;
+        text-align: center;
+        margin: auto;
+        color: #D8000C;
+        background-color: #FFBABA;
+        border: 1px solid #D8000C;
+        padding: 1.25em 1em 1.25em 1em;
+    }
+
+    .uk-card .uk-input {
+        background-color: #fff;
+    }
+
+    .uk-radio:checked, .uk-checkbox:checked {
+        background-color: $global-primary-background !important;
+    }
+
+    button.submitbtn {
+        color: #fff;
+    }
+
+    .uk-subnav-pill > .uk-active > a {
+        background-color: $global-primary-background !important;
+    }
+
+    .uk-button-primary {
+//        color: var(--section-color);
+        border: none;
+        border-radius: 5px;
+        color: #000;
+        font-size: 1.1em;
+        font-weight: bolder;
+        padding: 10px 40px;
+        background-color: var(--section-color) !important;
+        transition: background-color .5s, color .5s;
+        &:not[disabled]:hover {
+            cursor: pointer;
+            background-color: rgba(var(--section-color), .8);
+            color: #fff;
+        }
+    }
+
+    .uk-input:focus, .uk-select:focus, .uk-textarea:focus {
+        border-color: $global-primary-background !important;
+    }
+
+    .uk-tab.uk-tab-left {
+        width: fit-content;
+    }
+
+    .help-tooltip {
+        border-radius: 50%;
+        height: 16px;
+        width: 16px;
+        padding: 0;
+        line-height: 15px;
+        font-size: 11px;
+        margin-top: -15px;
+        margin-left: 6px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 709px) {
+        .paymentTypeBlock {
+            float: unset;
+        }
+
+        .additionalsBlock {
+            float: unset;
+            margin-top: 22px !important;
+            margin-left: 0 !important;
+        }
+    }
+
+    .donationWrapper {
+        margin-top: 3px;
+    }
+
+    @media only screen and (max-width: 670px) {
+
+        .alert-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .alertMessage {
+            font-size: 10px;
+        }
+    }
+}

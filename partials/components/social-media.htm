@@ -1,0 +1,15 @@
+<ul class="uk-navbar-nav footer-social">
+{% set types = ['discord', 'youtube', 'instagram', 'twitter', 'vimeo', 'facebook'] %}
+{% for type in types %}
+    {% set link = this.theme.__get(type) %}
+    {% if not link == '' %}
+    <li class="nav-item">
+        <a href="{{ link }}" class="nav-link" target="_blank">
+            <div class="icon">
+                <img src="{{ ('assets/images/icons/' ~ type~'.svg') | theme}}" uk-svg>
+            </div>
+        </a>
+    </li>
+    {% endif %}
+{% endfor %}
+</ul>

@@ -1,0 +1,25 @@
+$global-primary-background: $primaryColor;
+$global-secondary-background: $secondaryColor;
+::root {
+    --section-color: #333;
+    --section-background: $primaryColor;
+}
+$global-color: #455a41;
+//$global-font-family: 'Noto Sans', sans-serif;
+$base-heading-font-family: 'Segal';
+$base-body-font-weight: 300;
+$global-2xlarge-font-size: 5em;
+$global-xlarge-font-size: 3em;
+
+$lightbox-background: rgba(255,255,255, .85);
+$table-footer-font-size: 1rem;
+$offcanvas-bar-width: 340px;
+$global-link-color: lighten($global-primary-background, 10);
+
+$dropdown-padding: 10px;
+$global-link-color: $global-primary-background;
+$global-link-hover-color: $global-primary-background;
+
+@import "uikit/variables-theme";
+
+$dropdown-nav-font-size: $global-font-size;

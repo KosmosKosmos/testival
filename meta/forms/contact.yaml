@@ -1,0 +1,156 @@
+form_settings:
+    add_google_recaptcha: '0'
+    google_recaptcha_version: v2checkbox
+    google_recaptcha_site_key: ''
+    google_recaptcha_secret_key: ''
+    google_recaptcha_error_msg: ''
+    google_recaptcha_wrapper_css: ''
+    google_recaptcha_scripts_allow: '0'
+    google_recaptcha_locale_allow: '0'
+    add_antispam: '1'
+    antispam_delay: !!float 3
+    antispam_delay_error_msg: ''
+    antispam_label: ''
+    antispam_error_msg: ''
+    add_ip_protection: '1'
+    add_ip_protection_count: null
+    add_ip_protection_error_too_many_submits: ''
+    allow_autoreply: '1'
+    email_address_from: website@home.de
+    email_address_from_name: Webseite
+    email_address_replyto: reply@home.de
+    email_subject: ''
+    email_template: ''
+    allow_notifications: '1'
+    notification_address_from_form: '1'
+    notification_address_to: admin@home.de
+    notification_template: ''
+    autoreply_email_field: email
+    autoreply_name_field: lastname
+    autoreply_message_field: body
+    ga_success_event_allow: '0'
+    ga_success_event_category: ''
+    ga_success_event_action: ''
+    ga_success_event_label: ''
+definition:
+    sections:
+        message_data:
+            label:
+                de: 'Ihre Mitteilung'
+                en: 'Your message'
+        personal_data:
+            label:
+                de: 'Persönliche Daten'
+                en: 'Personal data'
+    fields:
+        subject:
+            section: message_data
+            styleClasses: uk-width-1-1
+            required: true
+            autoreply: true
+            label:
+                de: Betreff
+                en: Subject
+        body:
+            section: message_data
+            styleClasses: uk-width-1-1
+            required: true
+            autoreply: true
+            type: textarea
+            label:
+                de: 'Ihre Mitteilung'
+                en: Message
+        personal_data:
+            type: sectionTitle
+        salutation:
+            section: personal_data
+            required: true
+            type: radio
+            styleClasses: uk-width-1-10@s
+            inline: true
+            label:
+                de: Anrede
+                en: Salutation
+            options:
+                Mr:
+                    de: Herr
+                    en: Mr
+                Ms:
+                    de: Frau
+                    en: Ms
+        title:
+            section: personal_data
+            label:
+                de: Titel
+                en: Title
+        firstname:
+            section: personal_data
+            label:
+                de: Vorname
+                en: 'First name'
+            required: true
+            importName: firstname
+        lastname:
+            section: personal_data
+            label:
+                de: Nachname
+                en: Lastname
+            required: true
+            importName: lastname
+        street:
+            styleClasses: uk-width-1-3@s
+            section: personal_data
+            required: true
+            label:
+                de: Strasse
+                en: Street
+        street_no:
+            styleClasses: uk-width-1-6@s
+            section: personal_data
+            required: true
+            label:
+                de: Hausnummer
+                en: Number
+        zip:
+            styleClasses: uk-width-1-6@s
+            section: personal_data
+            required: true
+            label:
+                en: ZIP
+                de: PLZ
+        city:
+            styleClasses: uk-width-1-3@s
+            section: personal_data
+            required: true
+            label:
+                en: City
+                de: Ort
+        email:
+            section: personal_data
+            type: email
+            label:
+                de: E-Mail
+                en: Email
+            required: true
+        notes:
+            section: personal_data
+            label:
+                de: Sonstiges
+                en: Other
+        privacy:
+            section: personal_data
+            type: checkbox
+            required: true
+            label_short:
+                de: 'Datenschutz akzeptiert'
+                en: 'Datenschutz akzeptiert'
+            label:
+                de: 'Ich akzeptiere die <a href="/agb" target="_blank">Allgemeinen Geschäftsbedingungen</a> und <a href="/privacy" target="_blank">Datenschutzbestimmungen</a>'
+                en: 'Ich akzeptiere die <a href="/agb" target="_blank">Allgemeinen Geschäftsbedingungen</a> und <a href="/privacy" target="_blank">Datenschutzbestimmungen</a>'
+            styleClasses: uk-width-1-10@s
+        submit_button:
+            type: button
+            label:
+                de: Absenden
+                en: Submit
+name: 'Ein neues Formular'

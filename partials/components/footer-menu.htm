@@ -1,0 +1,15 @@
+{% for item in menuItems %}
+<div class="nav-item
+               {% if item.code != 'icon' %} {{item.viewBag.cssClass}} {% endif %}
+               {% if item.isActive %}uk-active{% endif %}">
+    <a href="{{ item.url }}" class="nav-link" {% if item.viewBag.isExternal %}target="_blank"{% endif %}>
+        {% if item.code == 'icon' %}
+        <div class="icon">
+            <img src="{{ ('assets/images/icons/' ~ item.viewBag.cssClass~'.svg') | theme}}" uk-svg>
+        </div>
+        {% else %}
+        {{ item.title }}
+        {% endif %}
+    </a>
+</div>
+{% endfor %}

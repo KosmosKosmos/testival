@@ -1,0 +1,36 @@
+@media (max-width: $container-max-width) {
+    footer {
+        img#logo {
+            width: 107px;
+        }
+        .uk-navbar-nav.footer {
+            margin-top: 10px !important;
+            display: block;
+            li {
+                width: 100%;
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .uk-navbar-nav.footer-social {
+            a {
+                padding: 0 15px !important;
+                .icon {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+        .uk-container div:last-child {
+            font-size: 0.8em;
+        }
+    }
+}
+
+section {
+    background-color: var(--section-background);
+    h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6, .uk-heading-small, .uk-heading-medium, .uk-heading-large, .uk-heading-xlarge, .uk-heading-2xlarge, p, div {
+        color: var(--section-color);
+    }
+}

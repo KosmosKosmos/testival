@@ -1,0 +1,40 @@
+description = "Meta Information"
+
+[viewBag]
+
+==
+<title>{{ app_name }} - {{ this.page.title }}</title>
+<!-- Meta data -->
+<meta charset="UTF-8">
+<meta lang="de">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<!-- SEO meta -->
+<meta name="author" content="{{ app_name }}">
+<meta name="title" content="{{ this.page.meta_title }}">
+<meta name="description" content="{{ this.page.meta_description }}">
+<!-- Open graph meta / Facebook & Co.-->
+<meta property="og:title"         content="{{ app_name }} - {{this.page.meta_title }}" />
+<meta property="og:description"   content="{{ this.page.meta_description }}" />
+<meta property="og:image"         content="{{ 'assets/images/social_media.jpg'|theme }}">
+<meta property="og:url"           content="{{ this.page.url }}" />
+<meta property="og:site_name"     content="{{ app_name }}">
+<meta property="og:type"          content="website" />
+<meta name="twitter:card" content="summary_large_image">
+{% if not (robot_index and robot_follow) %}
+<meta name="robots" content="index,follow">
+{% endif %}
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ app_logo | resize(57, 57) }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ app_logo | resize(60, 60) }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ app_logo | resize(72, 72) }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ app_logo | resize(76, 76) }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ app_logo | resize(144, 144) }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ app_logo | resize(120, 120) }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ app_logo | resize(144, 144) }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ app_logo | resize(152, 152) }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ app_logo | resize(180, 180) }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ app_logo | resize(192, 192) }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ app_logo | resize(32, 32) }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ app_logo | resize(96, 96) }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ app_logo | resize(16, 16) }}">

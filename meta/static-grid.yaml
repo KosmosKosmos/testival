@@ -1,0 +1,76 @@
+1-1:
+    name: Einspaltig
+    description: Titel mit TExt
+    fields:
+        background:
+            label: Hintergrund
+            type: colorpicker
+            span: left
+        color:
+            label: Schirft
+            type: colorpicker
+            span: right
+        elements:
+            type: repeater
+            itemsExpanded: false
+            groups: themes/festivent/meta/static-types.yaml
+        id:
+            cssClass: hidden
+            label: id
+        class:
+            label: Klasse
+            span: left
+#    icon: icon-header
+1-2@m:
+    name: Zweispaltig
+    description: Untertitel
+#    icon: icon-italic
+    fields:
+        background:
+            label: Hintergrund
+            type: colorpicker
+            span: left
+        color:
+            label: Schirft
+            type: colorpicker
+            span: right
+        elements:
+            type: repeater
+            itemsExpanded: false
+            groups: themes/festivent/meta/static-types.yaml
+        id:
+            cssClass: hidden
+            label: id
+        class:
+            label: Klasse
+            span: left
+1-3@m:
+    name: Dreispaltig
+    description: Untertitel
+#    icon: icon-italic
+    fields:
+        elements:
+            type: repeater
+            itemsExpanded: false
+            groups: themes/festivent/meta/static-types.yaml
+        id:
+            cssClass: hidden
+            label: id
+        class:
+            label: Klasse
+            span: left
+1-4@m:
+    name: Vierspaltig
+    description: Untertitel
+#    icon: icon-italic
+    fields:
+        elements:
+            type: repeater
+            itemsExpanded: false
+            groups: themes/festivent/meta/static-types.yaml
+        id:
+            cssClass: hidden
+            label: id
+        class:
+            label: Klasse
+            span: left

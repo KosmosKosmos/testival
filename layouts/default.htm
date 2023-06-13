@@ -1,0 +1,43 @@
+description = "Standard-Layout"
+
+[contenteditor]
+remove = 1
+
+[imageuploader]
+
+[sitePicker]
+forceUrl = 0
+
+[cookieBanner]
+include_css = 0
+update_partial = "components/cookie_js"
+update_selector = "#gdpr-reload"
+cookie_manager_page = "cookies"
+
+[cookieManager]
+include_css = 0
+include_js = 1
+deferred = 0
+
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'components/meta.htm' %}
+        {% partial 'components/styles.htm' %}
+    </head>
+
+    <body class="uk-container page-{{ this.page.id }}">
+        <header>
+        {% partial 'components/navigation' %}
+        </header>
+
+        <main uk-height-viewport="expand: true" class="uk-background-muted">
+        {% page %}
+        </main>
+
+        {% partial "components/footer" %}
+        {% partial "components/cookies" %}
+        {% partial 'components/scripts.htm' %}
+    </body>
+</html>

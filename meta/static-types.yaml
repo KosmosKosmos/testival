@@ -1,0 +1,43 @@
+simple-text:
+    name: Nur Text
+    icon: icon-file-text
+    fields:
+        class:
+            label: Klasse
+            span: left
+        id:
+            cssClass: hidden
+            label: id
+image-uploader:
+    name: Nur Bild
+    icon: icon-file-image
+    fields:
+        class:
+            label: Klasse
+        id:
+            cssClass: hidden
+            label: id
+keyvisual:
+    name: Kopfbild
+    fields:
+        id:
+            cssClass: hidden
+            label: id
+ticketshop:
+    name: Ticket-Shop
+    fields:
+        id:
+            cssClass: hidden
+            label: id
+lineup:
+    name: Lineup
+    fields:
+        id:
+            cssClass: hidden
+            label: id
+map:
+    name: Karte
+    fields:
+        id:
+            cssClass: hidden
+            label: id

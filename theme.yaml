@@ -1,0 +1,70 @@
+name: Festiware
+description: 'Theme for any festiware event'
+author: ''
+homepage: ''
+authorCode: ''
+code: ''
+parent: kosmoskosmos-starter
+database: '0'
+form:
+#    fields:
+#        title:
+#            label: theme.kosmoskosmos-starter::theme.title.label
+#            commentAbove: theme.kosmoskosmos-starter::theme.title.comment
+#            span: left
+    tabs:
+        fields:
+            primary_color:
+                label: theme.kosmoskosmos-starter::theme.primary_color
+                tab: Farben
+                type: colorpicker
+                span: left
+                default: 8618c2
+                assetVar: 'primaryColor'
+            secondary_color:
+                label: theme.kosmoskosmos-starter::theme.secondary_color
+                tab: Farben
+                span: right
+                type: colorpicker
+                default: 055554
+                assetVar: 'secondaryColor'
+            discord:
+                tab: Soziale Medien
+                label: Discord
+                span: row
+                spanClass: col-sm-3
+            facebook:
+                tab: Soziale Medien
+                label: Facebook
+                span: row
+                spanClass: col-sm-3
+            instagram:
+                tab: Soziale Medien
+                label: Instagram
+                span: row
+                spanClass: col-sm-3
+            twitter:
+                tab: Soziale Medien
+                label: Twitter
+                span: row
+                spanClass: col-sm-3
+            youtube:
+                tab: Soziale Medien
+                label: Youtube
+                span: row
+                spanClass: col-sm-3
+            vimeo:
+                tab: Soziale Medien
+                label: Vimeo
+                span: row
+                spanClass: col-sm-3
+            social_image:
+                label: theme.kosmoskosmos-starter::theme.social_image.label
+                commentAbove: theme.kosmoskosmos-starter::theme.social_image.comment
+                tab: Soziale Medien
+                type: fileupload
+                mode: image
+                size: giant
+                imageWidth: 1200
+                imageHeight: 630
+

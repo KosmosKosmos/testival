@@ -1,0 +1,54 @@
+[viewBag]
+
+[staticMenu headerMenu]
+code = "main"
+==
+<div class=""{{ flyingMenu ? 'uk-position-top' }}">
+    <section class="uk-width-expand navigation uk-padding uk-padding-remove-vertical" {{ flyingMenu ? 'uk-sticky' }}>
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+            <div class="uk-navbar-left">
+                <a href="{{ 'home'|page }}" class="logo-link uk-logo">
+                    <img src="{{ 'assets/images/logo.png'|theme }}">
+                </a>
+            </div>
+            <div class="uk-navbar-center uk-visible@m">
+                {% partial 'components/menu' menu=headerMenu class="main" %}
+            </div>
+            <div class="uk-navbar-center uk-hidden@m">
+                <div class="burger-menu" onclick="toggleMenu(this)">
+                    <img src="{{'assets/images/burger.svg'|theme}}" uk-svg>
+                </div>
+            </div>
+            <div class="uk-navbar-right localepicker">
+                {% partial "components/localepicker" %}
+            </div>
+        </nav>
+        <div id="menu" uk-offcanvas="mode: push">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div class="locales uk-margin-bottom">
+                    {% partial "components/localepicker" %}
+                </div>
+                {% partial 'components/menu' menu=headerMenu class="mobile" %}
+                <hr>
+                {# % partial 'components/menu' menu=footer class="footer mobile" % #}
+
+            </div>
+        </div>
+        <div id="main-menu" class="uk-position-absolute">
+            {% partial 'components/menu' menu=headerMenu class="main" %}
+        </div>
+    </section>
+</div>
+<script>
+    function toggleMenu(el) {
+        el.classList.toggle("active");
+        const content = document.getElementById("main-menu");
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    };
+</script>
+

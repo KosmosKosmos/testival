@@ -1,0 +1,20 @@
+static-pages:
+    home: {  }
+    hotel:
+        hotel-das-centrino: {  }
+        hotel-lage-anreise: {  }
+        hotel-self-check-in: {  }
+        hotel-dauermiete: {  }
+        hotel-veranstaltungen: {  }
+    zimmer-preise:
+        zimmer-preise-details: {  }
+    self-check-in: {  }
+    region: {  }
+    kunst-am-bau: {  }
+    csr: {  }
+    datenschutz: {  }
+    impressum: {  }
+    tickets: {  }
+    about-us: {  }
+    line: {  }
+    maol: {  }

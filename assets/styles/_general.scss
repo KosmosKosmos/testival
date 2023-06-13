@@ -1,0 +1,29 @@
+:focus[data-editable], :focus.ce-element {
+    outline: none !important;
+    outline-offset: 7px;
+}
+
+.form-generator-wrapper .section:not(:first-child) {
+    margin-top: 0 !important;
+}
+
+.uk-background-muted {
+    background-color: #fff !important;
+}
+
+b {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.uk-heading-xlarge {
+    line-height: .7em;
+}
+div p:last-child {
+    margin-bottom: 0;
+}

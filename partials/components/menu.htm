@@ -1,0 +1,43 @@
+<ul class="uk-navbar-nav {{class}}">
+    {% for item in menu.menuItems|filter(i => not i.viewBag.isHidden and (i.code != 'has_cookie_groups' or has_cookie_groups)) %}
+    {% set subItems = item.items |filter(i => not i.viewBag.isHidden) %}
+    {% set activeChild = (item.url != '/' and item.url in (page.id | page)) or (item.url == '/sales' and '/nfts/' in (page.id | page)) %}
+    {% set hasSubItems = subItems | length %}
+    <li class="nav-item
+               {% if not mobileVisible %}uk-visible@m{% endif %}
+               {% if item.code != 'icon' %} {{item.viewBag.cssClass}} {% endif %}
+               {% if hasSubItems %} dropdown {% endif %}
+               {% if item.isChildActive or item.isActive or activeChild %}uk-active{% endif %}">
+        <a href="{{ item.url }}" class="nav-link" {% if item.viewBag.isExternal %}target="_blank"{% endif %}>
+        {% if item.code == 'icon' %}
+            <div class="icon">
+                <img src="{{ ('assets/images/icons/' ~ item.viewBag.cssClass~'.svg') | theme}}" uk-svg>
+            </div>
+        {% else %}
+           {{ item.title }}
+        {% endif %}
+        </a>
+        {% if hasSubItems %}
+        <div class="uk-navbar-dropdown" uk-dropdown="pos: bottom-right; flip: false; offset: -5">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+                {% for subItem in subItems %}
+                <li class="{% if subItem.isActive %} uk-active {% endif %} {{subItem.viewBag.cssClass}}">
+                    <a href="{{ subItem.url }}" class="dropdown-item">
+                        {% if subItem.code == 'icon' %}
+                        <span class="icon">
+                            <img src="{{ ('assets/images/icons/' ~ subItem.viewBag.cssClass~'.svg') | theme}}" uk-svg>
+                        </span>
+                        {% else %}
+                        {{ item.title }}
+                        {% endif %}
+
+                        {{ subItem.title}}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

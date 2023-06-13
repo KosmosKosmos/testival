@@ -1,0 +1,9 @@
+{% if sitePicker and sitePicker.sites %}
+<ul class="localepicker">
+    {% for site in sitePicker.sites %}
+    <li class="{{ this.site.code == site.code  ? 'uk-active' : '' }}">
+        <a href="{{ site.url }}">{{ site.code }}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}

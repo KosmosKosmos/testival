@@ -1,0 +1,18 @@
+name: Hauptmenü
+items:
+    -
+        title: 'Neuer Menüpunkt'
+        nesting: null
+        type: all-static-pages
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: 1
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            locale:
+                it:
+                    title: 'Neuer Menüpunkt'

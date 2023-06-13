@@ -1,0 +1,13 @@
+<div class="gdpr-banner__opt-out">
+    <button role="button"
+         tabindex="0"
+         aria-pressed="false"
+         class="uk-button uk-button-default"
+         data-request="onDecline"
+         data-request-success="document.querySelector('.gdpr-banner').remove()"
+    >
+        {{ 'offline.gdpr::lang.cookie_banner.decline' | trans }}
+        {# { 'theme::lang.gdpr_read' | trans } #}
+
+    </button>
+</div>

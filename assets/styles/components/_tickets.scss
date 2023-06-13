@@ -1,0 +1,91 @@
+.unavailable-ticket {
+    .uk-card {
+        //        opacity: .6;
+        overflow: hidden;
+        &,
+        & * {
+            &:not(.unavailable-text) {
+                color: #999 !important;
+            }
+        }
+        &:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+        }
+    }
+    .uk-form-controls {
+        display: none;
+    }
+    .unavailable-text {
+        display: block;
+        width: 100%;
+    }
+    .unavailable-number {
+        display: inline-block;
+    }
+}
+.unavailable-number {
+    display: none;
+}
+.unavailable-text {
+    position: absolute;
+    z-index: 100;
+    background-color: indianred;
+    padding: 10px 20px;
+    bottom: 40%;
+    transform: translateY(100%) rotateZ(-30deg);
+    color: #fff !important;
+    text-align: center;
+    display: none;
+}
+.uk-card.ticket {
+    &.uk-card-body {
+        padding: 30px 30px 30px !important;
+    }
+    &.active {
+        color: #222 !important;
+        background-color: var(--color2) !important;
+        select {
+            color: #222 !important;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border: 1px solid rgba(0, 0, 0, 0.2) !important;
+
+            &:active {
+                font-weight: normal;
+            }
+        }
+        .input-label {
+            font-weight: bold;
+        }
+    }
+    &:hover select {
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+    }
+    /*
+    @media (min-width: 960px) {
+        &:not(:hover) select {
+            background-image: none !important;
+            padding-right: 2px !important;
+            width: 30px;
+        }
+    }
+    */
+    select {
+        text-align: right;
+        display: inline-block;
+        margin-bottom: -10px;
+        padding-bottom: 2px;
+        width: 50px;
+        background-color: #fff;
+        /*
+        @media (min-width: 960px) {
+            background-color: transparent;
+            border-color: transparent;
+        }
+        */
+    }
+    .input-label {
+        padding-top: 8px;
+    }
+}
